@@ -4,8 +4,8 @@ import './css/NavBar.css'
 
 export const Header = (props) =>{
     return(
-        <nav className="navbar navbar-expand navbar-primary ">
-          <a className="navbar-brand" href="/home"><strong>Anywhere <br></br>Accounting</strong></a>
+        <nav className="navbar navbar-expand navbar-primary">
+          <a className="navbar-brand" href="/home">Anywhere<br></br><strong>Accounting</strong></a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -32,10 +32,10 @@ export const Header = (props) =>{
         <ul class="nav pull-right">
             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, Jay</a>
               <ul class="dropdown-menu">
-                <li><a href="/user/preferences"><i class="icon-cog"></i> Preferences</a></li>
-                <li><a href="/help/support"><i class="icon-envelope"></i> Contact Support</a></li>
+                <li><a href="#"><i class="icon-cog"></i> Preferences</a></li>
+                <li><a href="#"><i class="icon-envelope"></i> Contact Support</a></li>
                 <li class="divider"></li>
-                <li><a href="/auth/logout"><i class="icon-off"></i> Logout</a></li>
+                <li><a href="#"><i class="icon-off"></i> Logout</a></li>
               </ul>
             </li>
         </ul>

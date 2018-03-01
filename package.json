@@ -16,7 +16,8 @@
     "express": "^4.16.2",
     "mongoose": "^5.0.7",
     "react": "^16.2.0",
-    "react-bootstrap": "^0.32.1"
+    "react-bootstrap": "^0.32.1",
+    "validator": "^9.4.1"
   },
   "devDependencies": {
     "expect": "^22.4.0",

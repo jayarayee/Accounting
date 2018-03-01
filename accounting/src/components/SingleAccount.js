@@ -23,6 +23,7 @@ class SingleAccount extends Component {
         <td>
           <div className="btn-group">
             <button className="btn btn-success" Link to="/edit" >Edit</button>
+            <button className="btn btn-danger" Link to="/edit" >Disable</button>
           </div>
         </td>
       </tr>

@@ -16,11 +16,11 @@ class ListAccount extends Component {
     console.log(typeof(all_accounts))
     return (
       <div className="container">
-      <legend className="" align="center" text-color="green"><strong>Charts of Account</strong></legend>
+      <legend className="" align="center" text-size=""><strong>Charts of Account</strong></legend>
       <Search/>
-      <hr/>
+
       <table className = "table table-stripped">
-        <thead bgcolor="#23B407" style={{ color: "white" }}>
+        <thead bgcolor="#393a3d" style={{ color: "white" }}>
           <tr>
             <td><strong>Account Code</strong></td>
             <td><strong>Account Name</strong></td>
@@ -37,7 +37,6 @@ class ListAccount extends Component {
           );
           })}
         </tbody>
-
       </table>
       </div>
     );
