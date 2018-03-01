@@ -8,12 +8,8 @@
 //     console.log('Connected to Mongodb server');
 //     const db = clint.db('Account');
 
-//     db.collection('Account').insertOne({
-//         "accountCode": 105,
-//         "accountName": "Cash",
-//         "normalSide" : "left",
-//         "accountStatus":"active",
-//         "initialBalance" : "1000"
+//     db.collection('User').insertOne({
+        
 //     },
      
 //         (err, result) => {

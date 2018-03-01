@@ -29,8 +29,8 @@ app.use(function(req, res, next) {
     next();
   });
 
-app.listen(3001, () => {
-    console.log('Started on port 3001');
+app.listen(8081, () => {
+    console.log('Started on port 8081');
 });
 
 // All Api Get and Posts -------------------------------------------------
@@ -105,6 +105,17 @@ app.post('/api',function(req, res) {
 
 app.get('/api/user', (req, res) => res.send('Get User'))
 
-app.post('/api/user', (req, res) => res.send('Post user'))
+// POST /user 
+// app.post('/user', (req, res) => {
+//     var body = _.pick(req.body,['email','password']);
+//     var user = new user(body);
+
+//     user.save().then((user) =>{
+//         res.send(user);
+//     }).catch((e) =>{
+//         res.status(400).send(e);
+//     })
+// });
+
 
 module.exports = {app}

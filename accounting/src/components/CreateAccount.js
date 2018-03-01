@@ -83,12 +83,11 @@ class CreateAccount extends Component {
               
           </div>
           <div class="row">
-            <div className="cancle">
+            <div className="btn-group">
                 <button className="btn btn-success" type="button" onClick={(event)=>this.submitForm(event)}>Cancle</button>
-            </div>
-            <div className="submit">
                 <button className="btn btn-success" type="button" onClick={(event)=>this.submitForm(event)}>Submit</button>
             </div>
+            
           </div>
       </form>
   </div>
