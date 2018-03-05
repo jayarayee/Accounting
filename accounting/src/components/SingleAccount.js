@@ -5,7 +5,6 @@ class SingleAccount extends Component {
   
   render() {
     const {single} = this.props
-    console.log(single)
     return (
       <tr>
         <td>{single.accountCode}</td>

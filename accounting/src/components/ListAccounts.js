@@ -10,10 +10,36 @@ import {Header} from '../components/NavBar'
 import "./css/ListAccount.css";
 import { CreateBtn } from '../library/CreatBnt';
 
+
+
 class ListAccount extends Component {
+  state = {
+    all_accounts:[]
+  }
+
+  componentDidMount(){
+    var userToken = window.localStorage.getItem("userToken") || ""
+    var userPermission = window.localStorage.getItem("userPermission") || ""
+    console.log("userToken from chars of Account", userToken)
+
+      var _this = this;
+      axios({
+        method:"get",
+        url:"http://localhost:8081/api",
+        headers:{
+          "Authorization":userToken
+        }
+      }).then(function (response) {
+          var data = response.data.all_accounts_list
+          _this.setState({all_accounts: data})
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+  }
+
   render() {
-    const {all_accounts} = this.props
-    console.log(typeof(all_accounts))
+    const {all_accounts} = this.state
     return (
       <div className="container">
       <legend className="" align="center" text-size=""><strong>Charts of Account</strong></legend>
