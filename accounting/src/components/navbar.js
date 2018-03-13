@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import './css/NavBar.css'
+import './css/custome.css'
 import axios from 'axios';
 import logo from '../res/logo.png'
 

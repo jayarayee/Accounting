@@ -12,10 +12,9 @@ import { Edit } from './components/Edit';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import JournalTable from './components/JournalTable';
+import login1 from './components/Login.1';
 
-
-
-class App extends Component {  
+class App extends Component {
   render() {
     return (
       <div className="App">
@@ -52,6 +51,7 @@ class App extends Component {
         <Route exact path ="/signup" render={({history})=>(
             <Signup />
         )}/>
+        
     </div>
     );
   }

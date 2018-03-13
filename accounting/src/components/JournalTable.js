@@ -19,6 +19,7 @@ class JournalTable extends Component {
             </thead>
         <tbody>
         </tbody>
+
       </table>
     </div>
     );

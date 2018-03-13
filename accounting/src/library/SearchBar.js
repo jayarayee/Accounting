@@ -14,7 +14,7 @@ export const Search = (props) =>{
                 </form>
             </div>
             <div className="float-right">
-                <a className="btn btn-success" id="btn" align="right" href="/create" style={{ color: "white" }}>Add</a>
+                <a className="btn btn-success float-right" id="btn" align="right" href="/create" style={{ color: "white" }}>New</a>
             </div>
         </div>
     </div>

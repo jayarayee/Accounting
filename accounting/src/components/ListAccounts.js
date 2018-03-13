@@ -4,13 +4,9 @@ import SingleAccount from './SingleAccount';
 import {Search} from '../library/SearchBar';
 import {CreateBnt} from '../library/CreatBnt';
 import {Header} from '../components/NavBar'
-
-
-//css
-import "./css/ListAccount.css";
+// //css
+// import "./css/ListAccount.css";
 import { CreateBtn } from '../library/CreatBnt';
-
-
 
 class ListAccount extends Component {
   state = {
@@ -44,16 +40,17 @@ class ListAccount extends Component {
       <div className="container">
       <legend className="" align="center" text-size=""><strong>Charts of Account</strong></legend>
       <Search/>
-
-      <table className = "table table-stripped">
+      <table className= "table table-stripped">
         <thead bgcolor="#393a3d" style={{ color: "white" }}>
           <tr>
-            <td><strong>Account Code</strong></td>
-            <td><strong>Account Name</strong></td>
-            <td><strong>Normal Side</strong></td>
-            <td><strong>Account Status</strong></td>
-            <td><strong>Balance</strong></td>
-            <td><strong>Actions</strong></td>
+            <td><strong>CODE</strong></td>
+            <td><strong>NAME</strong></td>
+            <td><strong>TYPE</strong></td>
+            <td><strong>DETAIL TYPE</strong></td>
+            <td><strong>SIDE</strong></td>
+            <td><strong>STATUS</strong></td>
+            <td><strong>BALANCE</strong></td>
+            <td><strong>ACTION</strong></td>
           </tr>
         </thead>
         <tbody>

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
-import './css/login1.css'
+import './css/custome.css'
 import Spinner from '../library/Spinner'
 import logo from '../res/logo.png'
 
 
-class Login extends Component {
+class Login1 extends Component {
   render() {
     return (
         <div className="fill-page dark-blue-background">
@@ -37,4 +37,4 @@ class Login extends Component {
     );
   }
 }
-export default Login;
+export default Login1;

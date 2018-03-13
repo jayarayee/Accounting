@@ -15,7 +15,7 @@ class PopMSG extends Component {
       return(
         <div id="msg-popup-container" className="transition" style={{display: this.props.display}}>
           <div id="msg-box" className="transition">
-            Book Added To: <strong><span id="msg-text">{this.props.text}</span></strong>!
+            <strong><span id="msg-text">{this.props.text}</span></strong>!
           </div>
         </div>
       )

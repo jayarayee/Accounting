@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './css/CreateAccount.css'
+// import './css/CreateAccount.css'
 
 class CreateAccount extends Component {
     state = {
