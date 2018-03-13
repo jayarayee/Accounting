@@ -32,7 +32,7 @@ var User = mongoose.model('User', {
             type: String,
             required: true
         },
-        teken:{
+        permission:{
             type: String,
             required: true
         }

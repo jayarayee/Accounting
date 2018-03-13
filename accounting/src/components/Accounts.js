@@ -8,6 +8,7 @@ class Account extends Component {
     render() {
       return (
     <div>
+        Accounts will go here
     </div>
     );
     }

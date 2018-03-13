@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './css/CreateAccount.css'
+// import './css/CreateAccount.css'
 
 class CreateAccount extends Component {
     state = {
@@ -82,10 +82,10 @@ class CreateAccount extends Component {
               <input id="inital_balance" className="form-control" type="text" value={this.state.initial_balance} onChange={(event)=>this.handelInitalbalance(event)}/>
               
           </div>
-          <div class="row">
-            <div className="btn-group">
-                <button className="btn btn-success" type="button" onClick={(event)=>this.submitForm(event)}>Cancle</button>
-                <button className="btn btn-success" type="button" onClick={(event)=>this.submitForm(event)}>Submit</button>
+          <div className="row">
+            <div className="">
+                <button className="btn btn-danger left" type="reset" onClick={(event)=> window.history.back()}>Cancel</button>
+                <button className="btn btn-success right" type="button" onClick={(event)=>this.submitForm(event)}>Submit</button>
             </div>
             
           </div>

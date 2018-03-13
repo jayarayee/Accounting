@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route} from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import CreateAccount from './components/CreateAccount';
 import ListAccount from './components/ListAccounts';
@@ -7,70 +7,52 @@ import SingleAccount from './components/SingleAccount';
 import {Header} from './components/NavBar';
 import Account  from './components/Accounts';
 import { Log } from './components/Logs';
-import { Home } from './components/Home';
+import Home from './components/Home';
 import { Edit } from './components/Edit';
-
-
-
-
-
-
+import Login from './components/Login';
+import Signup from './components/Signup';
+import JournalTable from './components/JournalTable';
+import login1 from './components/Login.1';
 
 class App extends Component {
-    state = {
-        all_accounts :[]
-    }
-
-    componentDidMount(){
-        var _this = this;
-        axios.get('http://localhost:3001/api')
-          .then(function (response) {
-            var data = response.data.all_accounts_list
-            _this.setState({all_accounts: data})
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-    }
-    
   render() {
-    const all_data = this.state.all_accounts
     return (
       <div className="App">
-        <Header/>
         <div className="">
+        <Header/>
           <Route exact path = "/chart_accounts" render={()=>(
-            <div>
-              <ListAccount all_accounts = {all_data}/>
-            </div>
+              <ListAccount />
           )} />
-		      <Route path ="/create" render={({history})=>(
-            <div>
+		      <Route exact path ="/create" render={({history})=>(
               <CreateAccount />
-			      </div>
           )}/>
-          <Route path ="/accounts" render={({history})=>(
-            <div>
+          <Route exact path ="/accounts" render={({history})=>(
               <Account />
-			      </div>
           )}/>
-          <Route path ="/logs" render={({history})=>(
-            <div>
+          <Route exact path ="/logs" render={({history})=>(
               <Log />
-			      </div>
           )}/>
-          <Route path ="/home" render={({history})=>(
-            <div>
+          <Route exact path ="/home" render={({history})=>(
               <Home />
-            </div>
           )}/>
-          <Route path ="/edit" render={({history})=>(
-            <div>
+          <Route exact path ="/edit" render={({history})=>(
               <Edit />
-            </div>
           )}/>
-		    </div>
-      </div>
+          <Route exact path ="/journal" render={({history})=>(
+              <JournalTable />
+          )}/>
+        </div>
+        <Route exact path ="/" render={({history})=>(
+            <Login />
+        )}/>
+        <Route exact path ="/login" render={({history})=>(
+          <Login />
+      )}/>
+        <Route exact path ="/signup" render={({history})=>(
+            <Signup />
+        )}/>
+        
+    </div>
     );
   }
 }
